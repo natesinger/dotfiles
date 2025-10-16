@@ -1,0 +1,32 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# keep prompt compact
+add_newline = true
+
+# left side (everything before the right-aligned bits)
+format = """
+$directory$git_branch$git_state$git_status$pixi$python$time $cmd_duration
+$character"""
+
+[character]
+success_symbol = "[➜](bold green)"
+
+# Duration of last command
+[cmd_duration]
+min_time = 500
+format = "[$duration]($style)"
+style = "bold yellow"
+
+# Current time
+[time]
+disabled = false
+time_format = "%H:%M:%S"
+format = "[$time]($style)"
+style = "dim white"
+
+# hide package info
+[package]
+disabled = true
+
+[pixi]
+symbol = "📦 "

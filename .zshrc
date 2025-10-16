@@ -48,7 +48,6 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  # zsh-autosuggestions
   zsh-syntax-highlighting
   you-should-use
   zsh-bat
@@ -86,12 +85,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Aliases
-pixi
+alias p="pixi"
 alias l="ls -la"
 alias c="clear"
-alias p="pixi"
 alias k="kubectl"
 alias t="terraform"
 alias d="docker"
 
 eval "$(starship init zsh)"
+export PATH="/Users/natesinger/.pixi/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
